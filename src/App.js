@@ -5,8 +5,8 @@ import "./index.css"
 class App extends Component {
   render() {
 
-    // web3.eth.getAccounts()
-    //   .then(console.log)
+    web3.eth.getAccounts()
+      .then(console.log)
 
     return (
       <div className="col-md-4">
@@ -18,7 +18,8 @@ class App extends Component {
             <button type="button" className="btn btn-primary" data-mdb-ripple-init>Button</button>
           </div>
         </div> */}
-        
+
+       <web3/> 
 
 
       </div>
