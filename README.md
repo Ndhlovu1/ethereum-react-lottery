@@ -11,6 +11,8 @@ npm install web3
 ## APPLICATION FRONT-END
 ![Screenshot from 2024-03-30 17-45-56](https://github.com/Ndhlovu1/ethereum-react-lottery/assets/46927702/e7a7705a-16cb-42a6-a2fd-4bdccfe8ce64)
 
+![Screenshot from 2024-03-30 19-08-32](https://github.com/Ndhlovu1/ethereum-react-lottery/assets/46927702/1cc4a751-b848-449f-8cd0-18ecf61faab9)
+
 ### OUR APPLICATION FRONT-END REQUIREMENTS
 
 1. The Contract Manager() - This is the person responsible for deploying the contract
