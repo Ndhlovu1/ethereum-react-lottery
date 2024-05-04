@@ -17,6 +17,7 @@ class App extends Component {
     manager : '',
     players: [],
     balance : '',
+    winnerPlayer:'',
     value : '',
     message: ''
   }
@@ -28,9 +29,10 @@ class App extends Component {
     const manager = await lottery.methods.manager().call()
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address)
+    const winnerPlayer = await lottery.methods.getWinner().call()
 
     //Set the state of the manager on the component
-    this.setState({ manager, players,balance })
+    this.setState({ manager, players,balance,winnerPlayer })
 
     }
 
@@ -43,7 +45,7 @@ class App extends Component {
 
     this.setState({ message:'Waiting on transaction success...' })
 
-    await lottery.methods.enters().send({
+    await lottery.methods.enter().send({
       from: accounts[0],
       value : web3.utils.toWei(this.state.value,"ether")
     })
@@ -115,7 +117,8 @@ class App extends Component {
                
 
                   <div className="alert alert-primary" style={{marginTop:"20px"}} role="alert">
-                    {this.state.message}
+                    STATUS : {this.state.message} <br/>
+                    CURRENT WINNER : {this.state.winnerPlayer}
                   </div>
                 </div>
             </div>
