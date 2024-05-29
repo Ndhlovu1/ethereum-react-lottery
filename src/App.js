@@ -63,7 +63,7 @@ class App extends Component {
       from: accounts[0]
     })
 
-    this.setState({message: "A winner has been picked!"})
+    this.setState({message: "A winner has been picked! Refresh Page to reflect changes!"})
 
   }
 
@@ -113,14 +113,24 @@ class App extends Component {
                   <hr/>
                   
                   <h4>Select Winner</h4>
-                  <button className="btn btn-success" onClick={this.onClick}>PICK</button>
+                  <button className="btn btn-success shadow-lg" onClick={this.onClick}>PICK</button>
                
 
-                  <div className="alert alert-primary" style={{marginTop:"20px"}} role="alert">
-                    STATUS : {this.state.message} <br/>
+                  <div className="alert alert-danger shadow-md" style={{marginTop:"20px",maxWidth:"350px"}} role="alert">
+                      STATUS : {this.state.message} <br/>
+                  </div>
+
+                  <div className="alert alert-primary shadow-lg" style={{marginTop:"20px",maxWidth:"500px"}} role="alert">
+                   
                     CURRENT WINNER : {this.state.winnerPlayer}
                   </div>
+
+                AUTO-REFRESH IS DISABLED, KINDLY REFRESH YOUR PAGE TO REFLECT CHANGES
+
+
+
                 </div>
+
             </div>
 
 
